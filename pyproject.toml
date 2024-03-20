@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ecommerce"
+version = "0.1.0"
+description = "Claim Application Processing"
+authors = ["Bhargav Sonagara <bhargavsonagara1776@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "3.10.13"
+Django = "4.1.11"
+django-environ = "^0.8.1"
+django-debug-toolbar = "^4.2.0"
+djangorestframework = "3.13.1"
+psycopg2-binary = "^2.9.2"
+drf-spectacular = "^0.22.1"
+djangorestframework-simplejwt = "^5.2.0"
+phonenumbers = "^8.13.32"
+django-filter = "^21.1"
+
+
