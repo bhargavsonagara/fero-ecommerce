@@ -10,11 +10,13 @@ from drfapi.models import Customer, Product, Order, OrderItem
 
 
 class CustomerModelSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(max_length=100, validators=[
+        UniqueValidator(queryset=Customer.objects.all(), message='Record with such customer name is already exists.')])
     contact_number = serializers.CharField(max_length=10, help_text='7296909051',
                                            validators=[UniqueValidator(queryset=Customer.objects.all(),
-                                                                       message='Record with such contact number already exists.')])
+                                                                       message='Record with such contact number is already exists.')])
     email = serializers.EmailField(validators=[UniqueValidator(queryset=Customer.objects.all(),
-                                                               message='Record with such email already exists.')])
+                                                               message='Record with such email is already exists.')])
 
     class Meta:
         model = Customer
@@ -44,6 +46,8 @@ class CustomerModelSerializer(serializers.ModelSerializer):
 
 
 class ProductModelSerializer(serializers.ModelSerializer):
+    name = serializers.CharField(max_length=100, validators=[
+        UniqueValidator(queryset=Customer.objects.all(), message='Record with such product name is already exists.')])
     weight = serializers.DecimalField(decimal_places=2, max_digits=4, help_text='25')
 
     class Meta:

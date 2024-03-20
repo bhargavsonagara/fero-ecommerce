@@ -11,6 +11,7 @@
 
 - Build an e-commerce API using Django Rest Framework to manage
 customers, orders, and products.
+- No Authentication provided all apis are public.
 - CRUD operations available.
 - Filters available on Order Items.
 - Supports latest version of Python i.e. Python 3.10.13 along with Django 4.1.11:
@@ -100,7 +101,9 @@ order list, create - http://127.0.0.1:8000/api/orders/
 products list, create - http://127.0.0.1:8000/api/products/
 ```
 
-> ##### 8. Extra functionality
+> ##### 8. Swagger UI URL: http://127.0.0.1:8000/swagger-ui/
+
+> ##### 9. Extra functionality
 
 - Added drf spectacular for swagger generate Open API schema.
 - Add coma seperated filter on orders.
